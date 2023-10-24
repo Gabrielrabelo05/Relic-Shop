@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    position: sticky;
+    background-color: aquamarine;
+    padding: 1rem;
+    top: 0;
+    box-shadow: 10px 0px 10px rgb(41, 39, 39);
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.header-content {
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
