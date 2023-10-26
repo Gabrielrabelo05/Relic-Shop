@@ -1,85 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
-
-* {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;700&display=swap');                                    
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior:  smooth;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    text-decoration: none;
 }
 body {
-    font: arial;
+    width: 100%;
+    height: 100vh;
 }
-.navbar {
-    background-color:rgb(36, 30, 30) ;
-    padding: 1rem;
-    position: static;
+header {
+    position: fixed;
+    width: 100%;
     top: 0;
-    box-shadow: 10px 0px 10px #2c2c2c;
-    z-index: 99;
-}
-.header-inner-content  {
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.navbar>div {
+    right: 0;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px 10%;
+    background-color: rgb(57, 47, 47);
+    box-shadow: 10px 0 10px rgb(37, 35, 35);
 }
-#logo-name {
+#title-logo {
     color: white;
-    font-family: 'Roboto', sans-serif;
+    max-width: 120px;
+    height: auto;
 }
 span {
     color: orangered;
-    margin-right: 5px;
 }
-nav ul  {
+.navmenu {
     display: flex;
-    align-items: center;
-    list-style: none;
 }
-#nav-icon {
-    display: flex;
-    align-items: center;
-}
-#nav-icon img {
-    width: 30px;
-    cursor: pointer;
-}
-#nav-icon img:first {
-    margin-right: 1rem;
-}
-a {
+.navmenu a {
+    display: block;
     color: white;
-    margin-right: 1.5rem;
-    cursor: pointer;
-    transition: 0.5s;
-    font-family: 'Roboto', sans-serif;
+    font-size: 10pt;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    transition: 0.3s;
 }
-a:hover{
+.navmenu a:hover {
     color: orangered;
-    transform: translatey(-5px);
-    transition: 0.5s;
+    transform: translateY(-5px);
 }
-.button-menu {
-    display: none;
+.nav-icon {
+    display: flex;
+    align-items: center
+}
+.nav-icon i {
+    margin-right: 20px;
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+.nav-icon i:hover {
+    color: orangered;
+    transform: scale(1.1);
+}
+#menu-icon {
+    font-size: 35px;
+    z-index: 1001;
+    cursor: pointer;
+    color: white;
 }
 section {
-    display: flex;
-    background-image: url(relic.png);
+    padding: 5% 10%;
+}
+.main-home {
+    background-image: url(guitar-relic-page.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 500px;
+    height: 80vh;
+    background-position: center;
+    display: grid;
+    align-items: center;
 }
-.container-left {
+.main-text {
     display: flex;
+    max-width: 400px;
     flex-direction: column;
+    color: white;
+    text-transform: capitalize;
+    gap: 15px;
 }
-#button-ver  {
-    background-color: orangered;
-    border-radius: 10px;
-    border: none;
-    width: 4rem;
-    height: 1.5rem;
+#title-des{
+    color: orangered;
+    font-size: 20pt;
+}
+#descr {
+    font-size: 11pt;
+}
+.cont-shop {
+    background-color:  rgb(81, 74, 74);
+}
+#title-shop {
+    color: white;
+}
+
+.img-products {
+
 }
