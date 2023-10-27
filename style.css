@@ -30,7 +30,7 @@ header {
     max-width: 120px;
     height: auto;
 }
-span {
+#sp-title {
     color: orangered;
 }
 .navmenu {
@@ -82,13 +82,13 @@ section {
     background-position: center;
     display: grid;
     align-items: center;
+    opacity: 0.9;
 }
 .main-text {
     display: flex;
     max-width: 400px;
     flex-direction: column;
     color: white;
-    text-transform: capitalize;
     gap: 15px;
 }
 #title-des{
@@ -99,12 +99,56 @@ section {
     font-size: 11pt;
 }
 .cont-shop {
-    background-color:  rgb(81, 74, 74);
+    background-color:  #dcd0c5;
+    width: 100%;
 }
 #title-shop {
-    color: white;
+    color: orangered;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
 }
 
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    gap: 3rem;
+}
+.row {
+    position: relative;
+    transition: all .40s;
+    cursor: pointer;
+    background-color: #e0d8d8;
+    border: black;
+    border-radius: 15px;
+    box-shadow: 0 0 2px 0px black
+}
 .img-products {
+    position: relative;
+    transition: all .40s;
+    width: 100%;
+}
+.sale {
+    color: red;
+    position: absolute;
+    border-radius: 13px 0 0 0;
+    top: 16px;
+    right: 0px;
+    padding: 5px 10px;
+    background-color: black;
+}
+.corte {
+    text-decoration: line-through;
+}
+h4 {
+    padding-left: 15px;
+}
+.valuer {
+    margin-top: 10px;
+    padding-left: 15px;
+}
+/* responsive-css */
+
+header{
 
 }
