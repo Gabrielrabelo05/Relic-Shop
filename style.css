@@ -116,7 +116,7 @@ section {
 .row {
     position: relative;
     transition: all .40s;
-    cursor: pointer;
+    cursor: default;
     background-color: #e0d8d8;
     border: black;
     border-radius: 15px;
@@ -148,6 +148,15 @@ h4 {
 .valuer {
     margin-top: 10px;
     padding-left: 15px;
+}
+.car {
+    margin-top: 10px;
+    margin-left: 15px;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: orangered;
+    cursor: pointer;
 }
 /* responsive-css */
 
