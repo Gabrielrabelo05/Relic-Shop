@@ -106,9 +106,8 @@ section {
     color: orangered;
     text-align: center;
     font-size: 28px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
-
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, auto));
@@ -123,19 +122,22 @@ section {
     border-radius: 15px;
     box-shadow: 0 0 2px 0px black
 }
+.row:hover {
+    box-shadow: 0 0 12px 0px black
+}
 .img-products {
     position: relative;
     transition: all .40s;
     width: 100%;
 }
 .sale {
-    color: red;
+    color: white;
     position: absolute;
     border-radius: 13px 0 0 0;
     top: 16px;
     right: 0px;
     padding: 5px 10px;
-    background-color: black;
+    background-color: orangered;
 }
 .corte {
     text-decoration: line-through;
