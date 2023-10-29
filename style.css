@@ -73,7 +73,7 @@ header {
 section {
     padding: 5% 10%;
 }
-.main-home {
+#main-home {
     background-image: url(guitar-relic-page.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -106,7 +106,7 @@ section {
     color: orangered;
     text-align: center;
     font-size: 28px;
-    margin-bottom: 40px;
+    margin-bottom: 49px;
 }
 .products {
     display: grid;
@@ -149,7 +149,7 @@ h4 {
     margin-top: 10px;
     padding-left: 15px;
 }
-.car {
+.add-car {
     margin-top: 10px;
     margin-left: 15px;
     padding: 5px;
@@ -158,8 +158,50 @@ h4 {
     background-color: orangered;
     cursor: pointer;
 }
+/* #cont-carrinho {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(57, 47, 47);
+}
+#title-carrinho {
+    color: orangered;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+} */
 /* responsive-css */
-
-header{
-
+@media(max-width:890px){
+    header {
+        padding: 20px 3%;
+        transition: .4s;
+    }
+}
+@media(max-width:630px){
+    .main-text h1 {
+        font-size: 50px;
+        transition: .4s;
+    }
+}
+@media(max-width:750px){
+    .navmenu {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background-color: rgb(57, 47, 47);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 120px 30px;
+        transition: all .42s;
+    }
+    .navmenu a  {
+        display: block;
+        margin: 14px 0;
+    }
+    .navmenu.open {
+        right: 0;
+    }  
 }
