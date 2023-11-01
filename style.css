@@ -184,7 +184,7 @@ h4 {
     background-color: rgb(57, 47, 47);
     flex-direction: column;
     align-items: center;
-    padding: 120px 30px;
+    padding: 40px 30px;
     transition: all .42s;
     overflow-y: scroll;
     z-index: 1000;
@@ -201,7 +201,7 @@ h4 {
     grid-template-columns: 32% 50% 18%;
     align-items: center;
     gap: 1rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 .img-cart {
     width: 100%;
@@ -222,6 +222,7 @@ h4 {
     font-size: 22px;
     cursor: pointer;
     margin-top: 3px;
+    color: red;
 }
 .total {
     display: flex;
@@ -229,13 +230,22 @@ h4 {
     color: white;
     margin-top: 2rem;
     border-top: 1px solid white;
+    padding-top: 10px;
 }
 .title-total {
     margin-right: 5px;
 }
-.buy-bnt {
+.buy-btn {
     display: flex;
     align-items: center;
+    color: white;
+    background-color: orangered;
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    border-radius: 10px;
+    justify-content: center;
+    border: none;
 }
 /* responsive-css */
 @media(max-width:890px){
