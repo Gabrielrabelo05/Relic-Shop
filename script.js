@@ -24,22 +24,6 @@ if (document.readyState == "loading") {
     ready();
 }
 
-// function ready() {
-//     var removeBtnCart = document.getElementsByClassName("box-cart");
-//     for (var i = 0; i < removeBtnCart.length; i++) {
-//         var btn = removeBtnCart[i];
-//         btn.addEventListener("click", removeCartItem);
-//     }
-// }
-
-// function removeCartItem(event) {
-//     Lógica para remover um item do carrinho aqui
-//     var clickedBtn = event.target
-//     clickedBtn.parentElement.remove()
-//     alert("Produto retirado do carrinho")
-// }
-
-
 function ready() {
     var removeBtnCart = document.getElementsByClassName("box-cart");
     for (var i = 0; i < removeBtnCart.length; i++) {
