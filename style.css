@@ -158,6 +158,7 @@ h4 {
     border-radius: 10px;
     background-color: orangered;
     cursor: pointer;
+    border: none;
 }
 .hidden {
     opacity: 0;
@@ -170,7 +171,6 @@ h4 {
     color: white;
     cursor: pointer;
     transition: all .2s;
-    
 }
 #bt-close-cart:hover {
     font-size: 22px
