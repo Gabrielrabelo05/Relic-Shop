@@ -198,7 +198,7 @@ h4 {
 }
 .box-cart {
     display: grid;
-    grid-template-columns: 32% 50% 18%;
+    /* grid-template-columns: 32% 50% 18%; */
     align-items: center;
     gap: 1rem;
     margin-top: 2rem;
@@ -223,13 +223,12 @@ h4 {
     cursor: pointer;
     margin-top: 3px;
     color: red;
+    border-bottom: 1px solid white;
 }
 .total {
     display: flex;
     justify-content: flex-end;
     color: white;
-    margin-top: 2rem;
-    border-top: 1px solid white;
     padding-top: 10px;
 }
 .title-total {
