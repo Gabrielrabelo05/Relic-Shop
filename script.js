@@ -42,12 +42,16 @@ for (var i = 0; i < cartAdd.length; i++) {
 function add(event) {
     var button = event.target;
     var productsShop = button.parentElement;
+    var imgElement = productsShop.parentElement.querySelector(".img-products").src
     var titleElement = productsShop.querySelector(".name-product").innerText;
-    var priceElement = productsShop.querySelector(".valuer").innerText;
-    addToCart(titleElement, priceElement);
+    var priceElement = productsShop.querySelector(".price").innerText;
+
+    addToCart(imgElement, titleElement, priceElement);
 }
 
-function addToCart(title, price) {
+function addToCart(img, title, price) {
+    var cartShopBox = document.createElement('div')
+    cartShopBox.classList.add('cart-box')
     let cartContent = document.querySelector(".cart-content");
     let cartItemName = document.getElementsByClassName("cart-title-product");
 
@@ -59,22 +63,80 @@ function addToCart(title, price) {
     }
 
     let cartBox = `
-        <div class="detail">
+    <div class="detail">
+        <img src=${img} alt="" class="img-cart">
+        <di>
             <div class="cart-title-product">${title}</div>
             <div class="price-cart">${price}</div>
-            <i class='bx bx-trash'></i>
-        </div>`;
+        </di>
+        <i class='bx bx-trash' onclick='removeCartItem(this)'></i>
+    </div>`;
 
     cartContent.innerHTML += cartBox;
 
-    // Agrega el evento de eliminación al ícono de la papelera
-    let trashIcon = cartContent.querySelector(".bx-trash");
-    trashIcon.addEventListener("click", removeCartItem);
+//     let cartItens  =  localStorage.getItem("cartItens")||[]
+
+//     cartItens.push({
+//         title: titleElement.innerText,
+//         price: priceElement.innerText,
+//     })
+
+//     localStorage.setItem("cartItens", JSON.stringify(cartItens))
+
+// function loadingCart(){
+//     let cartItens = localStorage.getItem(cart)
+// }
+
+
+
+//     // function cartSave({
+//     //     var cartContent  =  document.querySelector(".cart")
+//     // })
+function saveCartItems(){
+    var cartContent = document.getElementsByClassName('cart-content')[0]
+    var cartBoxes = cartContent.getElementsByClassName('cart-box')
+    var cartItems = []
+
+    for (var i = 0; i < cartBoxes.length; i++) {
+        cartBox = cartBoxes[i]
+        var titleElement = cartBox.getElementsByClassName('name-product')[0]
+        var priceElement = cart.getElementsByClassName('price')[0]
+        // var productImg = cartBox.getElementsByClassName('cart-img')[0].src
+
+        var item = {
+            title: titleElement.innerText,
+            price: priceElement.innerText,
+            // productImg: productImg,
+        }
+        cartItems.push(item)
+    }
+    localStorage.setItem('cartItems', JSON.stringify(cartItems))
+}
+// Loads In Cart 
+function loadCartItems() {
+    var cartItems = localStorage.getItem('cartItems')
+    if (cartItems) {
+        cartItems = JSON.parse(cartItems)
+
+        for(var i = 0; i < cartItems.length; i++) {
+            var item = cartItems[i]
+            addProductToCart(item.title, item.price, )
+        }
+        // item.productImg
+    }
+    var cartTotal = localStorage.getItem('cartTotal')
+    if(cartTotal) {
+        document.getElementsByClassName('total-price')[0].innerText = "$" + cartTotal
+    }
+    updateCartIcon()
+}
+
+
+let trashIcon = cartContent.querySelector(".bx-trash");
 }
 function removeCartItem(event) {
-    // Navegar até o elemento pai do botão (o item do carrinho) e removê-lo
-    var clickedBtn = event.target;
+    var clickedBtn = event;
     var cartItem = clickedBtn.parentElement;
     cartItem.parentElement.removeChild(cartItem);
-    // alert("Produto retirado do carrinho")
+    alert("Produto retirado do carrinho")
 }
