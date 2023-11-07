@@ -104,3 +104,45 @@ function removeCartItem(event) {
     cartItem.parentElement.removeChild(cartItem);
     alert("Produto retirado do carrinho")
 }
+
+// atualização do valor
+let test = 0
+const data = localStorage.getItem("cartItems");
+const json = JSON.parse(data);
+const total = json.map(obj => Number(obj.price.slice(1))).reduce((total, valor) => total + valor, 0);
+document.querySelector('.prince-total').textContent = `$${total}`;
+
+const allAdd = document.querySelectorAll('.add-car');
+
+const allLixeira = document.querySelectorAll('.bx-trash');
+        allLixeira.forEach(function(element) {
+            element.addEventListener('click', function() {
+                let test = 0
+                const data = localStorage.getItem("cartItems");
+                const json = JSON.parse(data);
+                const total = json.map(obj => Number(obj.price.slice(1))).reduce((total, valor) => total + valor, 0);
+                document.querySelector('.prince-total').textContent = `$${total}`;
+            });
+        });
+
+allAdd.forEach(function(element) {
+    element.addEventListener('click', function() {
+        let test = 0
+        const data = localStorage.getItem("cartItems");
+        const json = JSON.parse(data);
+        const total = json.map(obj => Number(obj.price.slice(1))).reduce((total, valor) => total + valor, 0);
+        document.querySelector('.prince-total').textContent = `$${total}`;
+
+        const allLixeira = document.querySelectorAll('.bx-trash');
+        allLixeira.forEach(function(element) {
+            element.addEventListener('click', function() {
+                console.log('xxxxx')
+                let test = 0
+                const data = localStorage.getItem("cartItems");
+                const json = JSON.parse(data);
+                const total = json.map(obj => Number(obj.price.slice(1))).reduce((total, valor) => total + valor, 0);
+                document.querySelector('.prince-total').textContent = `$${total}`;
+            });
+        });
+    });
+});
