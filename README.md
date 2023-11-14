@@ -1,7 +1,7 @@
 #e-commerce
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/Gabrielrabelo05/e-commerce?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
@@ -11,7 +11,7 @@
 # 🚀Para clonar o e-commerce, siga estas etapas:
 1° Passo: Download do Live Server caso não tenha ele já instalado <br>
 2° Passo: Abra o Terminal <br>
-3° Passo: `git clone ` <br>
+3° Passo: `git clone https://github.com/Gabrielrabelo05/e-commerce.git` <br>
 4° Passo: Apertar no arquivo HTML depois no botão direito do mouse e clickar em Open with Live Server <br>
 
 
