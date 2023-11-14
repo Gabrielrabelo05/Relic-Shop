@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relic Shop</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <header>
+        <h2 id="title-logo"><span id="sp-title">Relic </span>Shop</h2>
+        <ul class="navmenu">
+            <li><a class="link-nav" href="#main-home">Home</a></li>
+            <li><a class="link-nav" href="#">Shop</a></li>
+            <li><a class="link-nav" href="#title-shop">Products</a></li>
+            <li><a class="link-nav" href="#">Sobre nós</a></li>
+        </ul>
+        <div class="nav-icon">
+            <a href="#"><i class="bx bx-search"></i></a>
+            <a href="#"><i class="bx bx-user"></i></a>
+            <a id="car-shop" onclick="openCart()" style="cursor: pointer">
+                <i class="bx bx-cart"></i>
+            </a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+    <section id="main-home">
+        <div class="main-text">
+            <h1 id="title-des">Black Friday, loja inteira com descontos até 60% OFF</h1>
+            <h5 id="descr">Aproveite para realizar seu sonho de ter uma relíquia!</h5>
+        </div>
+    </section>
+    <section id="cart" class="hidden">
+        <a id="bt-close-cart" onclick="openCart()"><i class="bx bx-x"></i></a>
+        <h5 id="cart-title">Your cart</h5>
+        <div class="cart-content"></div>
+
+        <div class="cart-footer">
+            <div class="total">
+                <div class="title-total">Total:</div>
+                <div class="prince-total">$0</div>
+            </div>
+            <button type="button" class="buy-btn">Buy</button>
+        </div>
+    </section>
+    <section class="cont-shop">
+        <div class="cont-int-shop">
+            <h2 id="title-shop">Produtos disponíveis</h2>
+        </div>
+        <div class="products">
+            <div class="row">
+                <img class="img-products" src="./imgs/les paul.webp" alt="">
+                <div class="product-text">
+                    <h5 class="sale">Sale</h5>
+                </div>
+                <div class="price">
+                    <h4 class="name-product">GF Relic Old Blackie Evertune</h4>
+                    <p class="valuer">$<span class="corte">1300</span> - <span class="price">$899</span></p>
+                    <button class="add-car">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="row">
+                <img class="img-products" src="./imgs/guitar-relic-purple.webp" alt="">
+                <div class="product-text">
+                    <h5 class="sale">Sale</h5>
+                </div>
+                <div class="price">
+                    <h4 class="name-product">iCC Relic Purple Gotoh Floating</h4>
+                    <p class="valuer">$<span class="corte">950</span> - <span class="price">$799</span></p>
+                    <button class="add-car">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="row">
+                <img class="img-products" src="./imgs/guitar-relic-tele.webp" alt="">
+                <div class="product-text">
+                    <h5 class="sale">Sale</h5>
+                </div>
+                <div class="price">
+                    <h4 class="name-product">iCC/T Nitro Black Heavy Relic</h4>
+                    <p class="valuer">$ <span class="corte">800</span> - <span class="price">$589</span></p>
+                    <button class="add-car">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="row">
+                <img class="img-products" src="./imgs/guitar-les-red.webp" alt="">
+                <div class="product-text">
+                    <h5 class="sale">Sale</h5>
+                </div>
+                <div class="price">
+                    <h4 class="name-product">GF Camphor Burl Epoxy Resin</h4>
+                    <p class="valuer">$<span class="corte">2000</span> - <span class="price">$1499</span></p>
+                    <button class="add-car">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="row">
+                <img class="img-products" src="./imgs/guitar-relic-pink.webp" alt="">
+                <div class="product-text">
+                    <h5 class="sale">Sale</h5>
+                </div>
+                <div class="price">
+                    <h4 class="name-product">iCC HSS Relic Shell Pink 11 Tone</h4>
+                    <p class="valuer">$<span class="corte">800</span> - <span class="price">$619</span></p>
+                    <button class="add-car">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="row">
+                <img class="img-products" src="./imgs/guitar-20.png" alt="">
+                <div class="product-text">
+                    <h5 class="sale">Sale</h5>
+                </div>
+                <div class="price">
+                    <h4 class="name-product">Djentar x Stevie T 20 String One Off</h4>
+                    <p class="valuer">$<span class="corte">21000</span> - <span class="price">$19999</span></p>
+                    <button class="add-car">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
