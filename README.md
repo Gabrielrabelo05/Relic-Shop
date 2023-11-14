@@ -7,6 +7,10 @@
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
 
 <img src="imgs/guitar-relic-page.jpg" alt="Exemplo imagem">
+# 👨‍💻Tecnologias usadas: <br>
+HTML <br>
+CSS <br>
+JS <br>
 
 # 🚀Para clonar o e-commerce, siga estas etapas:
 1° Passo: Download do Live Server caso não tenha ele já instalado <br>
