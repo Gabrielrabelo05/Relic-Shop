@@ -1,5 +1,4 @@
 let cartAdd = document.getElementsByClassName("add-car");
-
 for (var i = 0; i < cartAdd.length; i++) {
     var button = cartAdd[i];
     button.addEventListener("click", add);
@@ -24,12 +23,11 @@ function openCart() {
 }
 // adicionar produto no carrinho
 function add(event) {
-    var button = event.target;
-    let productsShop = button.parentElement;
+    let btn = event.target;
+    let productsShop = btn.parentElement;
     let imgElement = productsShop.parentElement.querySelector(".img-products").src
     let titleElement = productsShop.querySelector(".name-product").innerText;
     let priceElement = productsShop.querySelector(".price").innerText;
-    
     let cartItemName = document.getElementsByClassName("cart-title-product");
 
 // Verificação de produtos    
@@ -51,9 +49,7 @@ function add(event) {
     addToCart(imgElement, titleElement, priceElement);
 }
 function addToCart(img, title, price) {
-
     let cartContent = document.querySelector(".cart-content");
-
     let cartBox = `
     <div class="detail">
         <img src=${img} alt="" class="img-cart">
@@ -76,61 +72,45 @@ function loadCartItems() {
 }
 // remove produto do carrinho e local
 function removeCartItem(event) {
-    var clickedBtn = event;
-    var cartItem = clickedBtn.parentElement;
-    var titleElement = cartItem.querySelector(".cart-title-product").innerText;
+    let clickedBtn = event;
+    let cartItem = clickedBtn.parentElement;
+    let titleElement = cartItem.querySelector(".cart-title-product").innerText;
     let cartItems = JSON.parse(localStorage.getItem("cartItems"))
 
     for (var i = 0; i < cartItems.length; i++) {
         if(cartItems[i].title === titleElement) cartItems.splice(i, 1)
     }
     localStorage.setItem("cartItems", JSON.stringify(cartItems))
-
     cartItem.parentElement.removeChild(cartItem);
     alert("Produto retirado do carrinho")
 }
-// atualização do valor
-let test = 0
-const data = localStorage.getItem("cartItems");
-const json = JSON.parse(data);
-const total = json.map(obj => Number(obj.price.slice(1))).reduce((total, valor) => total + valor, 0);
-document.querySelector('.prince-total').textContent = `$${total}`;
 
+// atualização do valor
+function updateTotal() {
+    const data = localStorage.getItem("cartItems");
+    const json = JSON.parse(data);
+    const total = json.map(obj => Number(obj.price.slice(1))).reduce((total, valor) => total + valor, 0);
+    document.querySelector('.prince-total').textContent = `$${total}`;
+}
+updateTotal();
 const allAdd = document.querySelectorAll('.add-car');
 const allLixeira = document.querySelectorAll('.bx-trash');
-        allLixeira.forEach(function(element) {
-            element.addEventListener('click', function() {
-                let test = 0
-                const data = localStorage.getItem("cartItems");
-                const json = JSON.parse(data);
-                const total = json.map(obj => Number(obj.price.slice(1))).reduce((total, valor) => total + valor, 0);
-                document.querySelector('.prince-total').textContent = `$${total}`;
-            });
-        });
-allAdd.forEach(function(element) {
-    element.addEventListener('click', function() {
-        let test = 0
-        const data = localStorage.getItem("cartItems");
-        const json = JSON.parse(data);
-        const total = json.map(obj => Number(obj.price.slice(1))).reduce((total, valor) => total + valor, 0);
-        document.querySelector('.prince-total').textContent = `$${total}`;
 
-        const allLixeira = document.querySelectorAll('.bx-trash');
-        allLixeira.forEach(function(element) {
-            element.addEventListener('click', function() {
-                let test = 0
-                const data = localStorage.getItem("cartItems");
-                const json = JSON.parse(data);
-                const total = json.map(obj => Number(obj.price.slice(1))).reduce((total, valor) => total + valor, 0);
-                document.querySelector('.prince-total').textContent = `$${total}`;
-            });
-        });
+allLixeira.forEach(function(element) {
+    element.addEventListener('click', function() {
+        updateTotal();
     });
 });
+
+allAdd.forEach(function(element) {
+    element.addEventListener('click', function() {
+        updateTotal();
+    });
+});
+
 let btnBuy = document.querySelector(".buy-btn")
 btnBuy.addEventListener("click", function() {
     let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
     if (cartItems.length > 0){
         alert("Compra realizada com sucesso")
         clearCart()
@@ -142,8 +122,6 @@ function clearCart() {
     // Limpar o conteúdo do carrinho no HTML, localStorage e total
     let cartContent = document.querySelector(".cart-content");
     cartContent.innerHTML = "";
-
     localStorage.removeItem("cartItems");
-
     document.querySelector('.prince-total').textContent = "$0";
 }
