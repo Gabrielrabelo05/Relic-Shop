@@ -94,14 +94,13 @@ function updateTotal() {
 }
 updateTotal();
 const allAdd = document.querySelectorAll('.add-car');
-const allLixeira = document.querySelectorAll('.bx-trash');
+const lixeira = document.querySelectorAll('.bx-trash');
 
-allLixeira.forEach(function(element) {
+lixeira.forEach(function(element) {
     element.addEventListener('click', function() {
         updateTotal();
     });
 });
-
 allAdd.forEach(function(element) {
     element.addEventListener('click', function() {
         updateTotal();
