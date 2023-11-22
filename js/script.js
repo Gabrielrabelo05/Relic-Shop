@@ -83,6 +83,7 @@ function removeCartItem(event) {
     localStorage.setItem("cartItems", JSON.stringify(cartItems))
     cartItem.parentElement.removeChild(cartItem);
     alert("Produto retirado do carrinho")
+    updateTotal()
 }
 
 // atualização do valor
@@ -106,6 +107,7 @@ allAdd.forEach(function(element) {
         updateTotal();
     });
 });
+
 
 let btnBuy = document.querySelector(".buy-btn")
 btnBuy.addEventListener("click", function() {
